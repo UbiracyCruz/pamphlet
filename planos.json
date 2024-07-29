@@ -1,0 +1,16 @@
+{"planos" : [{
+    "velocidade": "100 Mbps",
+    "indicado" : "Ideal para uso básico de internet e streaming.",
+    "beneficios": "Will have stuff in it"
+},
+{
+    "velocidade": "300 Mbps",
+    "indicado" : "Perfeito para uso moderado, jogos, e streaming em HD.",
+    "Beneficios": "Will have stuff in it"
+},
+{
+    "velocidade": "400 Mbps",
+    "indicado" : "Ideal para uso familiar com alguns dispositivos conectados ao mesmo tempo.",
+    "beneficios": "Will have stuff in it"
+}
+]}
