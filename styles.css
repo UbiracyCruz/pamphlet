@@ -47,7 +47,7 @@ header {
     align-items: center;
     background-color: white;
     background-size: contain;
-    background-image: url("/images/LOGO-200px.jpg");
+    background-image: url("./images/LOGO-200px.jpg");
     background-repeat: no-repeat;
     border-bottom-right-radius: 25%;
     box-shadow: 4px 2px 5px rgba(0,0,0,0.1);
@@ -81,15 +81,14 @@ main {
     margin-top: 20px;
 }
 .services h1{
-    grid-column: 1 / span 3;
+    /* grid-column: 1 / span 3; */
 }
 .service {
     display: grid;
     grid-template-columns: subgrid;
     background-color: white;
-    padding: 1.5rem;
+    padding: 0 1.5rem 0 1.5rem;
     border-radius: 8px;
-    margin-bottom: 0px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
     
@@ -173,7 +172,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     background-color: #563475;
-    color: var(--blue-white);
+    color: #fff;
     text-align: center;
     position: relative;
     bottom: 0;
@@ -182,7 +181,8 @@ footer {
     align-items: center;
     img{
         width: 60px;
-        filter:invert(85%) sepia(100%) saturate(0) brightness(200%) contrast(500%);
+        filter:invert(85%) sepia(100%) grayscale(100%) brightness(300%) contrast(100%);
+        opacity: 0.5;
     }
 }
 
@@ -225,10 +225,6 @@ footer {
         width: 25svw;
     }
 }
-
-/* Styling for the login button */
-        
-/* For Chrome, Safari, and newer versions of Edge */
 ::-webkit-scrollbar {
     width: 8px;
 }
