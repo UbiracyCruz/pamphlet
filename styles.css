@@ -147,7 +147,19 @@ main {
 .service:hover {
     background-color: #e1f5fe;
 }
-
+.selected{
+    opacity: 0.5;
+    background-image: url("./images/selected-icon/whatsapp-svgrepo-com.svg");
+    background-color: pink;
+    background-size: 1.5rem;
+    padding-bottom: 2rem;
+    width: 50%;
+    margin-bottom: 0.5rem;
+    border-radius: 0.7rem;
+    justify-self: center;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 .service h1 {
     display: grid;
     grid-template-columns: auto auto;
