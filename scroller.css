@@ -3,7 +3,7 @@ input[type=radio]{
 }
 .placeholder{
     display: grid;
-    height: 600px;
+    height: 32rem;
     justify-items: center;
 }
 .card{
