@@ -10,6 +10,7 @@
     --purple-base:rgb(110, 0, 110);
     --purple-text: rgb(100, 50, 100);
     --purple-pink: rgb(197, 140, 197);
+    --purple-button: rgb(215 141 215);
 }
 @font-face {
     font-family: komika-italic;
@@ -44,9 +45,9 @@ header {
 }
 #logo{
     width: 150px;
-    align-items: center;
     background-color: white;
     background-size: contain;
+    background-position-y: center;
     background-image: url("./images/LOGO-200px.jpg");
     background-repeat: no-repeat;
     border-bottom-right-radius: 25%;
@@ -59,7 +60,7 @@ header {
 header h1{
     background-color: white;
     align-content: center;
-    padding: 20px;
+    padding: 1.2rem;
     margin: 0px;
     box-shadow: 4px 2px 5px rgba(0,0,0,0.1);
 }
@@ -71,7 +72,7 @@ header h2{
 }
 main {
     display: grid;
-    padding: 20px;
+    padding: 1.5em;
     text-align: center;
 }
 .services {
@@ -148,7 +149,7 @@ main {
     background-color: #e1f5fe;
 }
 .selected{
-    opacity: 0.5;
+    opacity: 0.7;
     background-image: url("./images/selected-icon/whatsapp-svgrepo-com.svg");
     background-color: pink;
     background-size: 1.5rem;
@@ -177,9 +178,28 @@ main {
 }
 
 .about-us {
-    text-align: center;
-    margin-top: 40px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto;
+    text-align: justify;
+    margin-top: 1em;
+    padding: 0.7rem 0.7rem;
+    justify-items: center;
+
+    img{
+        height: 10rem;
+        width: auto;
+        grid-area: span 2;
+    }
+    h1{
+        margin: 0;
+    }
+    p{
+        margin-bottom: 0;
+        padding-left: 0.5rem;
+    }
 }
+
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -199,7 +219,7 @@ footer {
 }
 
 .button {
-    background-color: var(--blue-dark);
+    background-image: linear-gradient(to bottom right, var(--purple-pink), var(--purple-base));
     color: var(--blue-white);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     padding: 10px 10px;
@@ -214,7 +234,8 @@ footer {
 }
 
 .button:hover {
-    background-color: #128C7E;
+    scale: 1.01;
+    background-image: linear-gradient(to bottom right, var(--purple-button), var(--purple-base));
 }
 
 @media (max-width: 600px) {
@@ -223,22 +244,85 @@ footer {
         background-image: url("./images/blue-red.avif");
         background-position: bottom;
     }
+    main{
+        padding: 0.8em;
+    }
+    .placeholder{
+        height: 21rem !important;
+    }
     .services {
         grid-auto-flow: row;
         align-items: center;
+        gap: 0;
     }
     .services h1{
         grid-column: 1;
     }
     header h1{
-        font-size: large;
+        font-size: medium;
+        padding: 0 .5rem 0 1.0rem;
     }
     #logo{
         width: 25svw;
     }
     .card{
-        scale: 0.75;
+        scale: 0.65;
     }
+    .service{
+        padding: 0;
+    }
+    #item-3:checked{
+        ~.placeholder #second{
+            transform: translateX(-30%) scale(0.8) translateY(-10%) !important;
+            rotate: -8deg !important;
+        }
+        ~.placeholder #first{
+            transform: translateX(30%) scale(0.8) translateY(-10%) !important;
+            rotate: 8deg !important;
+        }
+    }
+    #item-2:checked{
+        ~.placeholder #first{
+            transform: translateX(-30%) scale(0.8) translateY(-10%) !important;
+            rotate: -8deg !important;
+        }
+        ~.placeholder #third{
+            transform: translateX(30%) scale(0.8) translateY(-10%) !important;
+            rotate: 8deg !important;
+        }
+    }
+    #item-1:checked{
+        ~.placeholder #third{
+            transform: translateX(-30%) scale(0.8) translateY(-10%) !important;
+            rotate: -8deg !important;
+        }
+        ~.placeholder #second{
+            transform: translateX(30%) scale(0.8) translateY(-10%) !important;
+            rotate: 8deg !important;
+        }
+    }
+    .page{
+        margin-bottom: 0;
+    }
+    .button{
+        font-size: 0.8rem;
+        margin:.4rem .4rem 0 .4rem;
+        padding: .3rem .3rem;
+        border-radius: 1.2rem;
+    }
+    .about-us{
+        p{
+            display: grid;
+            grid-template-columns: subgrid;
+            font-size: .8rem;
+        }
+        img{
+            max-width: 100px;
+            height: -webkit-fill-available;
+            border-radius: 1rem;
+        }
+    }
+
 }
 ::-webkit-scrollbar {
     width: 8px;

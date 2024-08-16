@@ -5,6 +5,7 @@ input[type=radio]{
     display: grid;
     height: 32rem;
     justify-items: center;
+    align-items: center;
 }
 .card{
     position: absolute;
@@ -25,16 +26,18 @@ input[type=radio]{
         rotate: 25deg;
     }
     ~.placeholder #first:hover{
-        rotate: 15deg;
+        rotate: 15deg !important;
     }
     ~.placeholder #second:hover{
-        rotate: -15deg;
+        rotate: -15deg !important;
     }
     ~.placeholder #third{
         opacity: 1;
         z-index: 1;
-        .selected{
+        .selected:hover{
             opacity: 1;
+            scale: 1.1;
+            transition: 0.4s ease;
         }
     }    
 
@@ -60,10 +63,10 @@ input[type=radio]{
         rotate: -25deg;
     }
     ~.placeholder #first:hover{
-        rotate: -15deg;
+        rotate: -15deg !important;
     }
     ~.placeholder #third:hover{
-        rotate: 15deg;
+        rotate: 15deg !important;
     }
 }
 #item-1:checked{
@@ -88,10 +91,10 @@ input[type=radio]{
         rotate: -25deg;
     }
     ~.placeholder #third:hover{
-        rotate: -15deg;
+        rotate: -15deg !important;
     }
     ~.placeholder #second:hover{
-        rotate: 15deg;
+        rotate: 15deg !important;
     }
 }
 
