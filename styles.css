@@ -326,7 +326,6 @@ footer {
         }
         img{
             max-width: 100px;
-            height: -webkit-fill-available;
         }
     }
 }
