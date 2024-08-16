@@ -253,7 +253,7 @@ footer {
         padding: 0.8em;
     }
     .placeholder{
-        height: 21rem !important;
+        height: 23rem !important;
     }
     .services {
         grid-auto-flow: row;
