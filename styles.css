@@ -258,7 +258,6 @@ footer {
     .services {
         grid-auto-flow: row;
         align-items: center;
-        gap: 0;
     }
     .services h1{
         grid-column: 1;
@@ -271,7 +270,7 @@ footer {
         width: 25svw;
     }
     .card{
-        scale: 0.65;
+        scale: 0.75;
     }
     .service{
         padding: 0;
@@ -318,6 +317,7 @@ footer {
     .about-us{
         padding: 0.7rem 0.7rem;
         align-items: center;
+        grid-template-rows: 1fr;
         p{
             display: grid;
             grid-template-columns: subgrid;
@@ -325,7 +325,15 @@ footer {
             margin: 1rem;
         }
         img{
-            max-width: 100px;
+            max-width: 35vw;
+            height: auto;
+        }
+    }
+    footer{
+        img{
+            flex-shrink: 1;
+            height: 2rem;
+            width: 5rem;
         }
     }
 }
