@@ -235,7 +235,7 @@ footer {
     font-size: 20px;
     margin: 5px 5px;
     cursor: pointer;
-    border-radius: 30px;
+    border-radius: 1rem;
     transition: background-color 0.3s ease;
 }
 
@@ -254,7 +254,7 @@ footer {
         padding: 0.8em;
     }
     .placeholder{
-        height: 23rem !important;
+        height: 28rem !important;
     }
     .services {
         grid-auto-flow: row;
@@ -271,7 +271,7 @@ footer {
         width: 25svw;
     }
     .card{
-        scale: 0.75;
+        scale: 0.85;
     }
     .service{
         padding: 0;
@@ -313,7 +313,7 @@ footer {
         font-size: 0.8rem;
         margin:.4rem .4rem 0 .4rem;
         padding: .3rem .3rem;
-        border-radius: 1.2rem;
+        border-radius: .5rem;
     }
     .about-us{
         padding: 0.7rem 0.7rem;
