@@ -29,6 +29,7 @@ body {
 	justify-content: end;
 	color: var(--purple-text);
     background-attachment: fixed;
+    transition: ease .5s;
 }
 .page{
 	background-color: var(--blue-white);
@@ -248,7 +249,6 @@ footer {
         margin-bottom:3rem;
         background-image: url("./images/blue-red.avif");
         background-position: bottom;
-        transition: ease .5s;
     }
     main{
         padding: 0.8em;
