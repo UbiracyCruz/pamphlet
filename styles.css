@@ -248,6 +248,7 @@ footer {
         margin-bottom:3rem;
         background-image: url("./images/blue-red.avif");
         background-position: bottom;
+        transition: ease .5s;
     }
     main{
         padding: 0.8em;
