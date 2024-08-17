@@ -48,6 +48,7 @@ header {
     width: 150px;
     background-color: white;
     background-size: contain;
+    margin: 0 -1px;
     background-position-y: center;
     background-image: url("./images/LOGO-200px.jpg");
     background-repeat: no-repeat;
@@ -180,7 +181,7 @@ main {
 
 .about-us {
     display: grid;
-    align-items: start;
+    align-content: center;
     grid-template-columns: auto auto;
     text-align: justify;
     margin-top: 1em;
@@ -200,9 +201,11 @@ main {
     }
     h1{
         margin: 0;
+        font-size: xx-large;
     }
     p{
         margin: 2rem;
+        font-size: x-large;
     }
 }
 
@@ -218,7 +221,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     img{
-        width: 60px;
+        width: 5rem;
         filter:invert(85%) sepia(100%) grayscale(100%) brightness(300%) contrast(100%);
         opacity: 0.5;
     }
@@ -328,15 +331,31 @@ footer {
         img{
             max-width: 35vw;
             height: auto;
+        }        
+        h1{
+            font-size: 1.5em;
         }
     }
     footer{
+        p{
+            opacity: .8;
+        }
         img{
-            flex-shrink: 1;
-            height: 2rem;
-            width: 5rem;
+            width: 15%;
+            margin: 0 .5rem 0 .5rem;
         }
     }
+}
+@media (min-width: 1440px) {
+    main{
+        grid-template-columns: 55% auto;
+        gap: 1em;
+    }
+    .about-us{
+        margin-top: 0;
+        align-items: center;
+    }
+
 }
 ::-webkit-scrollbar {
     width: 8px;
