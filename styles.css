@@ -35,7 +35,6 @@ body {
 	background-color: var(--blue-white);
 	padding: 1.2rem;
 	border-radius: 1rem;
-    margin-bottom: 0.8rem;
 }
 header {
     display: grid;
@@ -85,6 +84,7 @@ main {
 .services h1{
     /* grid-column: 1 / span 3; */
     margin: 0;
+    font-size: xxx-large;
 }
 .service {
     display: grid;
@@ -180,11 +180,11 @@ main {
 }
 .about-us {
     display: grid;
-    align-content: center;
+    align-content: stretch;
     grid-template-columns: auto 70%;
     text-align: justify;
-    margin-top: 1em;
-    padding: 2rem 2rem;
+    margin-top: 1.5em;
+    padding: 0;
     justify-items: center;
 
     div{
@@ -202,14 +202,17 @@ main {
      }
     h1{
         margin: 0;
-        font-size: xx-large;
+        font-size: xxx-large;
     }
     p{
         margin: 2rem;
-        font-size: x-large;
+        font-size: xx-large;
+    }
+    .about-text{
+        padding-block: 2rem;
+        max-width: 85%;
     }
 }
-
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -225,6 +228,9 @@ footer {
         width: 5rem;
         filter:invert(85%) sepia(100%) grayscale(100%) brightness(300%) contrast(100%);
         opacity: 0.5;
+    }       
+    p{
+        opacity: .8;
     }
 }
 
@@ -264,7 +270,7 @@ footer {
         gap:0;
     }
     .services h1{
-        grid-column: 1;
+        font-size: 1.5rem;
     }
     header h1{
         font-size: medium;
@@ -335,11 +341,13 @@ footer {
         h1{
             font-size: 1.5em;
         }
+        .about-text{
+            padding: 0;
+            max-width: none;
+        }
     }
     footer{
-        p{
-            opacity: .8;
-        }
+
         img{
             width: 15%;
             margin: 0 .5rem 0 .5rem;
@@ -351,9 +359,24 @@ footer {
         grid-template-columns: 55% auto;
         gap: 1em;
     }
+    .services{
+        h1{
+            font-size: 3rem;
+        }
+    }
     .about-us{
         margin-top: 0;
         align-items: center;
+        grid-template-columns: auto 65%;
+        p{
+            font-size: xx-large;
+        }
+        h1{
+            font-size: 3rem;
+        }
+    }
+    .card{
+        scale: 1.2;
     }
 
 }
