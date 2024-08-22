@@ -12,89 +12,91 @@ input[type=radio]{
     display: grid;
     transition: 0.5s ease-in-out;
 }
-#item-3:checked{
-    ~.placeholder #second{
-        opacity: 0.8;
-        transform: translateX(-50%) scale(0.8) translateY(-15%);
-        z-index: 0;
-        rotate: -25deg;
-    }
-    ~.placeholder #first{
-        opacity: 0.8;
-        transform: translateX(50%) scale(0.8) translateY(-15%);
-        z-index: 0;
-        rotate: 25deg;
-    }
-    ~.placeholder #first:hover{
-        rotate: 15deg !important;
-    }
-    ~.placeholder #second:hover{
-        rotate: -15deg !important;
-    }
-    ~.placeholder #third{
-        opacity: 1;
-        z-index: 1;
-        .selected:hover{
-            opacity: 1;
-            scale: 1.1;
-            transition: 0.4s ease;
-        }
-    }    
-
+/* Terceira carta */
+#item-3:checked ~.placeholder #third{
+    opacity: 1;
+    z-index: 1;   
 }
-#item-2:checked{
-    ~.placeholder #second{
-        opacity: 1;
-        z-index: 1;
-        .selected{
-            opacity: 1;
-        }
-    }
-    ~.placeholder #third{
-        transform: translateX(50%) scale(0.8) translateY(-15%);
-        opacity: 0.8;
-        z-index: 0;
-        rotate: 25deg;
-    }
-    ~.placeholder #first{
-        transform: translateX(-50%) scale(0.8) translateY(-15%);
-        opacity: 0.8;
-        z-index: 0;
-        rotate: -25deg;
-    }
-    ~.placeholder #first:hover{
-        rotate: -15deg !important;
-    }
-    ~.placeholder #third:hover{
-        rotate: 15deg !important;
-    }
+#item-3:checked ~.placeholder #third .selected:hover{
+    opacity: 1;
+    scale: 1.1;
+    transition: 0.4s ease;
 }
-#item-1:checked{
-    ~.placeholder #first{
+#item-3:checked ~.placeholder #second{
+    opacity: 0.8;
+    transform: translateX(-50%) scale(0.8) translateY(-15%);
+    z-index: 0;
+    rotate: -25deg;
+}
+#item-3:checked ~.placeholder #first{
+    opacity: 0.8;
+    transform: translateX(50%) scale(0.8) translateY(-15%);
+    z-index: 0;
+    rotate: 25deg;
+}
+#item-3:checked ~.placeholder #first:hover{
+    rotate: 15deg !important;
+}
+#item-3:checked ~.placeholder #second:hover{
+    rotate: -15deg !important;
+}
+/* Terceira carta */
+/* Segunda carta */
+#item-2:checked ~.placeholder #second{
+    opacity: 1;
+    z-index: 1;
+}
+#item-2:checked ~.placeholder #second .selected:hover{
+    opacity: 1;
+    scale: 1.1;
+    transition: 0.4s ease;
+}
+#item-2:checked ~.placeholder #third{
+    transform: translateX(50%) scale(0.8) translateY(-15%);
+    opacity: 0.8;
+    z-index: 0;
+    rotate: 25deg;
+}
+#item-2:checked ~.placeholder #third:hover{
+    rotate: 15deg !important;
+}
+#item-2:checked ~.placeholder #first{
+    transform: translateX(-50%) scale(0.8) translateY(-15%);
+    opacity: 0.8;
+    z-index: 0;
+    rotate: -25deg;
+}
+#item-2:checked ~.placeholder #first:hover{
+    rotate: -15deg !important;
+}
+/* Segunda carta */
+/* Primeira carta */
+#item-1:checked ~.placeholder #first{
         opacity: 1;
         z-index: 1;
         rotate: none;
-        .selected{
-            opacity: 1;
-        }
-    }
-    ~.placeholder #second{
-        transform: translateX(50%) scale(0.8) translateY(-15%);
-        opacity: 0.8;
-        z-index: 0;
-        rotate: 25deg;
-    }
-    ~.placeholder #third{
-        transform: translateX(-50%) scale(0.8) translateY(-15%);
-        opacity: 0.8;
-        z-index: 0;
-        rotate: -25deg;
-    }
-    ~.placeholder #third:hover{
-        rotate: -15deg !important;
-    }
-    ~.placeholder #second:hover{
-        rotate: 15deg !important;
-    }
 }
-
+#item-1:checked ~.placeholder #first .selected:hover{
+    opacity: 1;
+    scale: 1.1;
+    transition: 0.4s ease;
+}
+#item-1:checked ~.placeholder #second{
+    transform: translateX(50%) scale(0.8) translateY(-15%);
+    opacity: 0.8;
+    z-index: 0;
+    rotate: 25deg;
+}
+#item-1:checked ~.placeholder #third{
+    transform: translateX(-50%) scale(0.8) translateY(-15%);
+    opacity: 0.8;
+    z-index: 0;
+    rotate: -25deg;
+}
+#item-1:checked ~.placeholder #third:hover{
+    rotate: -15deg !important;
+}
+#item-1:checked ~.placeholder #second:hover{
+    rotate: 15deg !important;
+}
+/* Primeira carta */

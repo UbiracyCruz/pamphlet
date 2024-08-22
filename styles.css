@@ -32,10 +32,11 @@ body {
     transition: ease .5s;
 }
 .page{
-	background-color: var(--blue-white);
-	padding: 1.2rem;
-	border-radius: 1rem;
+    background-color: var(--blue-white);
+    padding: 1.2rem;
+    border-radius: 1rem;
 }
+/* Cabeçalho */
 header {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -43,7 +44,7 @@ header {
     text-align: center;
     
 }
-#logo{
+header #logo{
     width: 150px;
     background-color: white;
     background-size: contain;
@@ -54,7 +55,7 @@ header {
     border-bottom-right-radius: 25%;
     box-shadow: 4px 2px 5px rgba(0,0,0,0.1);
 }
-#box3{
+header #box3{
     display: grid;
     grid-template-rows: 1fr 1fr;
 }
@@ -65,12 +66,12 @@ header h1{
     margin: 0px;
     box-shadow: 4px 2px 5px rgba(0,0,0,0.1);
 }
-
 header h2{
     font-size: 14px;
     padding: 0px;
     margin: 0px;
 }
+/* Cabeçalho */
 main {
     display: grid;
     padding: 1.5em;
@@ -86,6 +87,7 @@ main {
     margin: 0;
     font-size: xxx-large;
 }
+/* Cartas */
 .service {
     display: grid;
     grid-template-columns: subgrid;
@@ -94,62 +96,63 @@ main {
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: background-color 0.3s ease;
-    
-    ul{
-        list-style-type: circle;
-        text-align: left;
-    }
-    #number{
-        font-size: 2em;
-        font-family: komika-italic;
-    }
-    #text{
-        font-size: small;
-        color: var(--purple-pink);
-    }
-    #apps{
-        font-size: 10px;
-        img{
-            width: 22px;
-            padding-bottom: 10px;
-        }
-    }
-    #price{
-        display: grid;
-        grid-template-columns: auto auto auto;
-        justify-content: center;
-        p{
-            grid-column: 1 /span 3;
-            text-align: left;
-            font-size: 12px;
-        }
-        #number{
-            font-size: 3em;
-            position: relative;
-            top:-20px;
-        }
-        #cifrao{
-            color: var(--purple-pink);
-            font-size: 12px;
-            font-weight: bold;
-        }
-        #cents{
-            font-weight: bold;
-            font-style: italic;
-            display: grid;
-            align-items: center;
-        }
-    }  
-    .border-top{
-        border-top: dotted;
-        border-width: 3px;
-        width: 80%;
-        justify-self: center;
-    }
+}
+.service ul{
+    list-style-type: circle;
+    text-align: left;
+    padding-left: 3.5em;
+}
+.service #number{
+    font-size: 2em;
+    font-family: komika-italic;
+}
+.service #text{
+    font-size: small;
+    color: var(--purple-pink);
+}
+.service #apps{
+    font-size: 10px;
+}
+.service #apps img{
+    width: 22px;
+    padding-bottom: 10px;
+}
+.service #price{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}  
+.service #price p{
+    grid-column: 1 /span 3;
+    text-align: left;
+    font-size: 12px;
+}
+.service #price #number{
+    font-size: 3em;
+    position: relative;
+    top:-20px;
+}
+.service #price #cifrao{
+    color: var(--purple-pink);
+    font-size: 12px;
+    font-weight: bold;
+}
+.service #price #cents{
+    font-weight: bold;
+    font-style: italic;
+    display: grid;
+    align-items: center;
+}
+.service .border-top{
+    border-top: dotted;
+    border-width: 3px;
+    width: 80%;
+    justify-self: center;
 }
 .service:hover {
     background-color: #e1f5fe;
 }
+/* Cartas */
 .selected{
     opacity: 0.7;
     background-image: url("./images/selected-icon/whatsapp-svgrepo-com.svg");
@@ -174,10 +177,7 @@ main {
     justify-content: center;
     align-items: center;
 }
-.service h1::first-letter {
-    font-size: 1.3em;
-    vertical-align: top;
-}
+/* Sobre nós */
 .about-us {
     display: grid;
     align-content: stretch;
@@ -186,33 +186,35 @@ main {
     margin-top: 1.5em;
     padding: 0;
     justify-items: center;
-
-    div{
-        display: grid;
-        justify-items: center;
-    }
-     .image{
-        height: 100%;
-        width: 100%;
-        background-size: cover;
-        background-position: center;
-        grid-area: span 2;
-        border-radius: 1rem;
-        background-image: url("./images/alternate-bg.avif");
-     }
-    h1{
-        margin: 0;
-        font-size: xxx-large;
-    }
-    p{
-        margin: 2rem;
-        font-size: xx-large;
-    }
-    .about-text{
-        padding-block: 2rem;
-        max-width: 85%;
-    }
 }
+.about-us h1{
+    margin: 0;
+    font-size: xxx-large;
+}
+.about-us p{
+    margin: 2rem;
+    font-size: xx-large;
+}
+.about-us div{
+    display: grid;
+    justify-items: center;
+}
+.about-us .about-text{
+    padding-block: 2rem;
+    max-width: 85%;
+}
+.about-us .image{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    grid-area: span 2;
+    border-radius: 1rem;
+    background-image: url("./images/alternate-bg.avif");
+ }
+ /* Sobre nós */
+
+ /* Rodape */
 footer {
     display: flex;
     flex-wrap: wrap;
@@ -223,17 +225,19 @@ footer {
     bottom: 0;
     width: 100%;
     justify-content: space-evenly;
-    align-items: center;
-    img{
-        width: 5rem;
-        filter:invert(85%) sepia(100%) grayscale(100%) brightness(300%) contrast(100%);
-        opacity: 0.5;
-    }       
-    p{
-        opacity: .8;
-    }
+    align-items: center; 
 }
+footer p{
+    opacity: .8;
+}
+footer img{
+    width: 5rem;
+    filter:invert(85%) sepia(100%) grayscale(100%) brightness(300%) contrast(100%);
+    opacity: 0.5;
+}
+/* Rodapé */
 
+/* Botão */
 .button {
     background-image: linear-gradient(to bottom right, var(--purple-pink), var(--purple-base));
     color: var(--blue-white);
@@ -253,7 +257,7 @@ footer {
     scale: 1.01;
     background-image: linear-gradient(to bottom right, var(--purple-button), var(--purple-base));
 }
-
+/* Botão */
 @media (max-width: 600px) {
     body{
         margin-bottom:3rem;
@@ -269,7 +273,7 @@ footer {
     .services {
         gap:0;
     }
-    .services h1{
+    .services > h1{
         font-size: 1.5rem;
     }
     header h1{
@@ -285,36 +289,37 @@ footer {
     .service{
         padding: 0;
     }
-    #item-3:checked{
-        ~.placeholder #second{
-            transform: translateX(-30%) scale(0.8) translateY(-10%) !important;
-            rotate: -8deg !important;
-        }
-        ~.placeholder #first{
-            transform: translateX(30%) scale(0.8) translateY(-10%) !important;
-            rotate: 8deg !important;
-        }
+
+    /* Primeira carta */
+    #item-3:checked ~.placeholder #second{
+        transform: translateX(-30%) scale(0.8) translateY(-10%) !important;
+        rotate: -8deg !important;
     }
-    #item-2:checked{
-        ~.placeholder #first{
-            transform: translateX(-30%) scale(0.8) translateY(-10%) !important;
-            rotate: -8deg !important;
-        }
-        ~.placeholder #third{
-            transform: translateX(30%) scale(0.8) translateY(-10%) !important;
-            rotate: 8deg !important;
-        }
+    #item-3:checked ~.placeholder #first{
+        transform: translateX(30%) scale(0.8) translateY(-10%) !important;
+        rotate: 8deg !important;
     }
-    #item-1:checked{
-        ~.placeholder #third{
-            transform: translateX(-30%) scale(0.8) translateY(-10%) !important;
-            rotate: -8deg !important;
-        }
-        ~.placeholder #second{
-            transform: translateX(30%) scale(0.8) translateY(-10%) !important;
-            rotate: 8deg !important;
-        }
+    /* Primeira carta */
+    /* Segunda carta */
+    #item-2:checked ~.placeholder #first{
+        transform: translateX(-30%) scale(0.8) translateY(-10%) !important;
+        rotate: -8deg !important;
     }
+    #item-2:checked ~.placeholder #third{
+        transform: translateX(30%) scale(0.8) translateY(-10%) !important;
+        rotate: 8deg !important;
+    }
+    /* Segunda carta */
+    /* Primeira carta */
+    #item-1:checked ~.placeholder #second{
+        transform: translateX(30%) scale(0.8) translateY(-10%) !important;
+        rotate: 8deg !important;
+    }
+    #item-1:checked ~.placeholder #third{
+        transform: translateX(-30%) scale(0.8) translateY(-10%) !important;
+        rotate: -8deg !important;
+    }
+    /* Primeira carta */
     .page{
         margin-bottom: 0;
     }
@@ -324,34 +329,33 @@ footer {
         padding: .3rem .3rem;
         border-radius: .5rem;
     }
+    /* Sobre nós */
     .about-us{
         padding: 0.7rem 0.7rem;
         align-items: center;
         grid-template-rows: 1fr;
-        p{
-            display: grid;
-            grid-template-columns: subgrid;
-            font-size: .8rem;
-            margin: 1rem;
-        }
-        img{
-            max-width: 35vw;
-            height: auto;
-        }        
-        h1{
-            font-size: 1.5em;
-        }
-        .about-text{
-            padding: 0;
-            max-width: none;
-        }
     }
-    footer{
-
-        img{
-            width: 15%;
-            margin: 0 .5rem 0 .5rem;
-        }
+    .about-us p{
+        display: grid;
+        grid-template-columns: subgrid;
+        font-size: .8rem;
+        margin: 1rem;
+    }
+    .about-us img{
+        max-width: 35vw;
+        height: auto;
+    }        
+    .about-us h1{
+        font-size: 1.5em;
+    }
+    .about-us .about-text{
+        padding: 0;
+        max-width: none;
+    }
+    /* Sobre nós */
+    footer img{
+        width: 15%;
+        margin: 0 .5rem 0 .5rem;
     }
 }
 @media (min-width: 1440px) {
@@ -359,21 +363,19 @@ footer {
         grid-template-columns: 55% auto;
         gap: 1em;
     }
-    .services{
-        h1{
-            font-size: 3rem;
-        }
+    .services h1{
+        font-size: 3rem;
     }
     .about-us{
         margin-top: 0;
         align-items: center;
         grid-template-columns: auto 65%;
-        p{
-            font-size: xx-large;
-        }
-        h1{
-            font-size: 3rem;
-        }
+    }
+    .about-us p{
+        font-size: xx-large;
+    }
+    .about-us h1{
+        font-size: 3rem;
     }
     .card{
         scale: 1.2;
